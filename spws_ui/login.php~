@@ -1,0 +1,46 @@
+<?php
+if(isset($_POST["username"])){
+
+//extract data from the post
+extract($_POST);
+
+//set POST variables
+$url = 'http://localhost/spws/api.php?n=check';
+$fields = array(
+            'username'=>urlencode($username),
+            'password'=>urlencode($password),
+        );
+
+//url-ify the data for the POST
+$fields_string="";
+foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+rtrim($fields_string,'&');
+
+//open connection
+$ch = curl_init();
+
+//set the url, number of POST vars, POST data
+curl_setopt($ch,CURLOPT_URL,$url);
+curl_setopt($ch,CURLOPT_POST,count($fields));
+curl_setopt($ch,CURLOPT_POSTFIELDS,$fields_string);
+
+//execute post
+$result = curl_exec($ch);
+
+//close connection
+curl_close($ch);
+echo "<br>".$result."<br>";
+if($result=="false"){
+	echo "username or password is invalid";
+}else{
+	$_session["username"] = $username ;
+	$_session["password"] = $password ;
+ 	  header( 'Location: index.php' ) ;
+}
+}
+?>
+<form action="" method="post">
+	<input type="text" name="username" value="">
+	<input type="text" name="password" value="">
+	<input type="submit" value="check user">
+</form>

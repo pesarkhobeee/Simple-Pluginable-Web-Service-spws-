@@ -1,0 +1,20 @@
+<plugin>
+	<name>upload file</name>
+	<version>1.0</version>
+	<description>that is a plugin for uload mp3 file. plz creat a folder in the root of your web servic whith uploads name</description>
+	<dependency>
+		<name>authentication</name>
+		<minversion>1.0</minversion>
+		<maxversion>null</maxversion>
+	</dependency>
+	<external>
+		<name>show_mp3_files</name>
+		<url>show_mp3_files</url>
+		<restricted>1</restricted>
+	</external>
+	<external>
+		<name>upload_file</name>
+		<url>upload_file</url>
+		<restricted>1</restricted>
+	</external>
+</plugin>

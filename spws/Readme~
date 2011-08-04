@@ -1,0 +1,17 @@
+========Simple Pluginable Web Service (spws)========
+
+/**
+ * @Name : Simple Pluginable Web Service
+ * @Author : Farid Ahmadian
+ * @Mail : pesarkhobeee@gmail.com
+ * @Description : this is just a simple web service that creat with collection of plugins under n-tier Architector for creat and manage icecast playlist file
+ */
+
+todo list:
+1. plugin manager
+2. fragment cache
+3. tray cache system
+4. support OOP
+5. documentin by phpdoc : http://manual.phpdoc.or
+6. a security system for all input data
+7. a data base layer like PDO

@@ -1,0 +1,16 @@
+<plugin>
+	<name>report what's mp3 is in system and create and delete playlist</name>
+	<version>1.0</version>
+	<description>tozih inke che ahanghayi dar ice cast gharar darand</description>
+	<external>
+		<name>show_playlist</name>
+		<url>show_playlist</url>
+		<restricted>0</restricted>
+	</external>
+	<external>
+		<name>empty_playlist</name>
+		<url>empty_playlist</url>
+		<restricted>1</restricted>
+	</external>
+</plugin>
+

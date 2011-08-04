@@ -1,0 +1,2 @@
+1 . when "show play list"  clicked this error is ecoure:
+uncaught exception: [Exception... "Component returned failure code: 0x80004003 (NS_ERROR_INVALID_POINTER) [nsIXSLTProcessor.importStylesheet]" nsresult: "0x80004003 (NS_ERROR_INVALID_POINTER)" location: "JS frame :: http://localhost/spws_ui/index.php :: displayResult :: line 20" data: no]

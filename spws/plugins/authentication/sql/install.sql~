@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS `#__kondaktor`;
+
+CREATE TABLE `#__kondaktor` (
+`id` int(10) unsigned NOT NULL auto_increment,
+`name` varchar(255) NOT NULL,
+`kind` varchar(10) NOT NULL,
+`sat` text NOT NULL,
+`sun` text NOT NULL,
+`mon` text NOT NULL,
+`tue` text NOT NULL,
+`wed` text NOT NULL,
+`thu` text NOT NULL,
+`fri` text NOT NULL,
+`published` tinyint(1) NOT NULL default '0',
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8

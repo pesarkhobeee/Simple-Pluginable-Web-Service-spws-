@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>;)</title>
+		  <script src="http://code.jquery.com/jquery-latest.js"></script>
+	</head>
+<body>
+		<script>
+			$.ajax({
+			   type: "POST",
+			   url: "http://localhost/spws/api.php?n=check",
+			   data: "username=admin1&password=admin",
+			   success: function(msg){
+				if(msg=="true"){
+			    		 alert( "Data Saved: " + "yes" );
+				}
+			   }
+			 });
+		</script>
+<form action="http://localhost/spws/api.php?n=show_mp3_files" method="post">
+	<input type="hidden" name="username" value="admin">
+	<input type="hidden" name="password" value="admin">
+	<input type="submit" value="show file">
+</form>
+<form action="http://localhost/spws/api.php?n=show_playlist" method="post">
+	<input type="submit" value="show play list">
+</form>
+<form action="http://localhost/spws/api.php?n=empty_playlist" method="post">
+	<input type="hidden" name="username" value="admin">
+	<input type="hidden" name="password" value="admin">
+	<input type="submit" value="empty playlist">
+</form>
+<form action="http://localhost/spws/api.php?n=fetch_playlist" method="post">
+	<input type="hidden" name="username" value="admin">
+	<input type="hidden" name="password" value="admin">
+	<input type="submit" value="fetch playlist">
+</form>
+<form action="http://localhost/spws/api.php?n=check" method="post">
+	<input type="text" name="username" value="">
+	<input type="text" name="password" value="">
+	<input type="submit" value="check user">
+</form>
+<hr>
+<iframe src="upload.php" >
+
+</iframe>
+</body>
+</html>

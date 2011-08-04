@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+baseurl="http://localhost/spws"
+echo "pleas enter username"
+read username
+echo "pleas enter password"
+read password
+while true; do
+echo "\n 1.send file \n 2.show file \n 3.show playlist \n 4.empthy playlist \n 5.fetch playlist \n 6.exit"  
+read answer
+	if [ "$answer" == 1 ]
+	then
+		echo "pleas enter file name"
+		read filename
+	    curl -d "username=$username&password=$password" -F"file=@$filename" $baseurl/api.php?n=upload_file
+	elif  [ "$answer" == 2 ] 
+	then 
+		 curl -d "username=$username&password=$password"  $baseurl/api.php?n=show_mp3_files
+	elif  [ "$answer" == 3 ] 
+	then 
+		 curl  $baseurl/api.php?n=show_playlist
+		elif  [ "$answer" == 4 ] 
+	then 
+		 curl -d "username=$username&password=$password" $baseurl/api.php?n=empty_playlist
+		elif  [ "$answer" == 5 ] 
+	then 
+		 curl -d "username=$username&password=$password" $baseurl/api.php?n=fetch_playlist
+		elif  [ "$answer" == 6 ] 
+	then 
+		 exit
+	fi
+
+done

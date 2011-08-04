@@ -1,0 +1,35 @@
+<plugin>
+	<name>authentication</name>
+	<version>1.0</version>
+	<description>that is a plugin for authentication user</description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<external>
+		<name>check</name>
+		<url>check</url>
+		<restricted>0</restricted>
+	</external>
+	<external>
+		<name>form</name>
+		<url>form</url>
+		<restricted>0</restricted>
+	</external>
+	<internal>
+		<name>check</name>
+		<input>username , password</input>
+		<output>1 or 0</output>
+	</internal>
+	<internal>
+		<name>return_user_id</name>
+		<input>username , password</input>
+		<output>userid</output>
+	</internal>
+</plugin>

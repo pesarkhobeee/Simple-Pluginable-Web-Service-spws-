@@ -1,0 +1,6 @@
+<?php
+
+$link= mysql_connect("localhost","root","1384fe")or die(mysql_error());
+mysql_select_db("spws", $link)or die(mysql_error());
+
+?>
